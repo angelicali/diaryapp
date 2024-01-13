@@ -1,0 +1,3 @@
+Requirements:
+- today's page
+- past entries
