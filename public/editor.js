@@ -17,24 +17,6 @@ fetch(entryUrl, {method: 'GET'}).then((res)=>res.json()).then((jsonData) => {
   quill.setContents(jsonData.entryContent);
 })
 
-// async function getUserContent() {
-//   const res = await fetch(baseUrl, {
-//     method: 'GET'
-//   })
-//   console.log(res);
-//   return res.json();
-// }
-
-
-// getUserContent().then((userData) => {
-//   console.log("promise fulfilled. user data:");
-//   console.log(userData);
-//   quill.setContents(userData.content);
-  
-// });
-
-
-
 quill.on('text-change', (delta, oldDelta, source) =>{
   if (source == 'api') {
     console.log('An API call triggered this change.');
